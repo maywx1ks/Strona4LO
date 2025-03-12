@@ -99,8 +99,8 @@ section{
 }
 
 .header .navbar a{
-    margin: 0.1rem;
-    font-size: 1.6rem ;
+    margin: 1.8rem;
+    font-size: 2rem ;
     color: #fff;
 }
 
@@ -223,7 +223,7 @@ section{
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background: url(..//St4Lo/imeges/zastawkacentral.png) no-repeat;
+    background: url("../imeges/background2.png") no-repeat;
     background-size: cover;
     background-position: center;
 }
@@ -288,6 +288,8 @@ section{
     padding: 5rem;
     text-align: center;
     border: var(--border);
+    background: var(--black); /* Устанавливаем фон изначально */
+    transition: background 0.3s, color 0.3s;
 }
 
 .menu .box-container .box img{
@@ -317,7 +319,19 @@ section{
 }
 
 .menu .box-container .box :hover > *{
+    background: #fff;
     color: var(--black);
+}
+
+.menu .box-container .box:hover h3,
+.menu .box-container .box:hover .price,
+.menu .box-container .box:hover .price span {
+    color: var(--black);
+}
+
+.menu .box-container .box:hover button {
+    background: var(--black);
+    color: #fff;
 }
 
 .products .box-container{
@@ -333,16 +347,16 @@ section{
 }
 
 .products .box-container .box .icons a{
-    height: 5rem;
     width: 5rem;
+    height: 5rem;
     line-height: 5rem;
     font-size: 2rem;
     border: var(--border);
     color: #fff;
-    margin: 3rem;
+    margin: 2rem;
 }
 
-.products .box-container .box .icons a :hover{
+.products .box-container .box .icons a:hover{
     background: var(--main-color);
 }
 
@@ -596,11 +610,11 @@ section{
         position: absolute;
         top: 100%; right: -100%;
         background: #fff;
-        width: 30rem;
+        width: 25rem;
         height: calc(100vh - 9.5rem);
     }
 
-    .header .navbar .active{
+    .header .navbar.active{
         right: 0;
     }
 
@@ -608,7 +622,7 @@ section{
         color: var(--black);
         display: block;
         margin: 1.5rem;
-        padding: 5rem;
+        padding: 1rem;
         font-size: 2rem;
 
     }
